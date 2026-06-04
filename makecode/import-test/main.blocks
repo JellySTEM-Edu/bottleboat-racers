@@ -1,0 +1,25 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables></variables><block type="pxt-on-start" id="LE3m7dh$vuBP{t%3t$}t" x="0" y="0"><statement name="HANDLER"><block type="jellystem_wheelStop" id="ez}.|^NAi=+)bk)3}tMY"><field name="motor">jellystem.Motors.AllMotors</field><comment pinned="false" h="80" w="160">Startup initialization settings</comment><next><block type="jellystem_setS1ToS4Type" id="FOr6:,[mxxa{KLqFr)6k"><field name="type">jellystem.S1ToS4Type.Servo</field><next><block type="jellystem_extendServoControl" id="RG}y878[JN`[H89U;/#t"><field name="index">jellystem.PwmAndServoIndex.S4</field><field name="servoType">jellystem.ServoType.Servo180</field><value name="angle"><shadow type="math_number" id="#$Q~ZI8kf14Ez90nxDkz"><field name="NUM">90</field></shadow></value><next><block type="device_print_message" id="-m9=_2S-Y}:)edK13:~!"><comment pinned="false" h="80" w="160">Display the "Electronics Test v1" program string</comment><value name="text"><shadow type="text" id="h!!1C%u8Ixn3Jf0LKlHr"><field name="TEXT">et-v1</field></shadow></value><next><block type="device_show_leds" id="r8wshW_Go/ww~S35RgPJ"><field name="LEDS">`
+        . . # . . 
+        . . # . . 
+        . . # . . 
+        . . # . . 
+        . . # . .
+        `</field><comment pinned="false" h="80" w="160">Display a straight line at start</comment></block></next></block></next></block></next></block></next></block></statement></block><block type="device_button_event" id="?@i5ywPN}Mihwn}s9%JP" x="447" y="0"><field name="NAME">Button.A</field><comment pinned="false" h="80" w="160">Press button A to turn the steering servo left (135 degrees)</comment><statement name="HANDLER"><block type="jellystem_extendServoControl" id="6UvRLwyyZAW+kO0({]|W"><field name="index">jellystem.PwmAndServoIndex.S4</field><field name="servoType">jellystem.ServoType.Servo180</field><value name="angle"><shadow type="math_number" id="}Bzr!n3)}q#3z``Hg6IJ"><field name="NUM">135</field></shadow></value><next><block type="device_show_leds" id="-vs9z^w@MvbiUCB#37ds"><field name="LEDS">`
+        # . . . . 
+        . # . . . 
+        . . # . . 
+        . . # . . 
+        . . # . .
+        `</field></block></next></block></statement></block><block type="device_button_event" id="@H@-UZGtYXE?[k4hc~k`" x="0" y="542"><field name="NAME">Button.AB</field><comment pinned="false" h="80" w="160">Press buttons A and B together to center the steering servo (90 degrees)</comment><statement name="HANDLER"><block type="jellystem_extendServoControl" id="/p/sP(YtmvVG~*/DX4BB"><field name="index">jellystem.PwmAndServoIndex.S4</field><field name="servoType">jellystem.ServoType.Servo180</field><value name="angle"><shadow type="math_number" id="equ:~M80b,IHiEH8WN4l"><field name="NUM">90</field></shadow></value><next><block type="device_show_leds" id="@sOQlqJ]Gl*!HJEZU^nl"><field name="LEDS">`
+        . . # . . 
+        . . # . . 
+        . . # . . 
+        . . # . . 
+        . . # . .
+        `</field></block></next></block></statement></block><block type="device_button_event" id="R}%E1=MpLXdGp2+J2x_!" x="447" y="542"><field name="NAME">Button.B</field><comment pinned="false" h="80" w="160">Press button B to turn the steering servo right (45 degrees)</comment><statement name="HANDLER"><block type="jellystem_extendServoControl" id="oU?PC`y81hu88FQy)G,d"><field name="index">jellystem.PwmAndServoIndex.S4</field><field name="servoType">jellystem.ServoType.Servo180</field><value name="angle"><shadow type="math_number" id="BKV%pX^(Wto!0p:^*=EE"><field name="NUM">45</field></shadow></value><next><block type="device_show_leds" id="^0hhP*Ou`Kor/fj7=5mH"><field name="LEDS">`
+        . . . . # 
+        . . . # . 
+        . . # . . 
+        . . # . . 
+        . . # . .
+        `</field></block></next></block></statement></block><block type="input_logo_event" id=":M[^GZSv2]^|__.OjRy," x="0" y="940"><field name="action">TouchButtonEvent.LongPressed</field><comment pinned="false" h="80" w="160">Long press the micro:bit logo to stop all motors</comment><statement name="HANDLER"><block type="jellystem_wheelStop" id="IGYyn(-VE)B?6qpASQ1;"><field name="motor">jellystem.Motors.AllMotors</field></block></statement></block><block type="input_logo_event" id="yk,L[Az0M309K!LLby2t" x="311" y="940"><field name="action">TouchButtonEvent.Pressed</field><comment pinned="false" h="80" w="160">Short press the micro:bit logo to run all motors forward at 50% speed</comment><statement name="HANDLER"><block type="jellystem_setMotorsDirectionSpeed" id="c2=(]@t921}W09Ge1lMs"><field name="motor">jellystem.Motors.AllMotors</field><field name="direction">jellystem.MotorsDirection.CC</field><value name="speed"><shadow type="math_number_minmax" id="bE1mHOT?itjm{%|1#AtX"><mutation min="0" max="100" precision="0"></mutation><field name="SLIDER">50</field></shadow></value></block></statement></block></xml>
